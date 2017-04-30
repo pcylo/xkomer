@@ -1,0 +1,4 @@
+project=xkomer
+architecture=container
+test=rspec
+template=erb
