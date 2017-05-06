@@ -1,15 +1,16 @@
 class FetchCurrentOffer
   def initialize
-    @page = load_content
+    @page = load_page
     @repository = OfferRepository.new
 
-    @current_name      = get_by_selector(ENV['NAME_SELECTOR'])
-    @current_old_price = get_by_selector(ENV['OLD_PRICE_SELECTOR'])
-    @current_new_price = get_by_selector(ENV['NEW_PRICE_SELECTOR'])
-    @current_discount  = get_by_selector(ENV['DISCOUNT_SELECTOR'])
-    @current_image_url = get_attr_by_selector(ENV['IMAGE_URL_SELECTOR'], 'src').to_s.gsub('-small', '')
-    @current_quantity  = get_attr_by_selector(ENV['QUANTITY_SELECTOR'], 'aria-valuemax').to_s.to_i
-    @current_code      = get_attr_by_selector(ENV['CODE_SELECTOR'], 'data-product-id').to_s.to_i
+    @current_name       = get_by_selector(ENV['NAME_SELECTOR'])
+    @current_old_price  = get_by_selector(ENV['OLD_PRICE_SELECTOR'])
+    @current_new_price  = get_by_selector(ENV['NEW_PRICE_SELECTOR'])
+    @current_discount   = get_by_selector(ENV['DISCOUNT_SELECTOR'])
+    @current_image_url  = get_attr_by_selector(ENV['IMAGE_URL_SELECTOR'], 'src').to_s.gsub('-small', '')
+    @current_quantity   = get_attr_by_selector(ENV['QUANTITY_SELECTOR'], 'aria-valuemax').to_s.to_i
+    @current_code       = get_attr_by_selector(ENV['CODE_SELECTOR'], 'data-product-id').to_s.to_i
+    @current_left_count = get_attr_by_selector(ENV['SOLD_COUNT_SELECTOR'], 'aria-valuenow').to_s.to_i
   end
 
   def call
@@ -19,14 +20,16 @@ class FetchCurrentOffer
   private
 
   attr_reader :page, :repository, :current_name, :current_old_price, :current_new_price,
-              :current_discount, :current_image_url, :current_quantity, :current_code
+              :current_discount, :current_image_url, :current_quantity, :current_code, :existing_id,
+              :current_left_count
 
   def offer_exists?
-    false # TODO
+    @existing_id = OfferRepository.new.find_recent(current_code)
+    !!existing_id
   end
 
   def update_existing_offer
-    true
+    repository.update(existing_id, left_count: current_left_count)
   end
 
   def create_new_offer
@@ -37,11 +40,12 @@ class FetchCurrentOffer
       discount:     current_discount,
       image_url:    current_image_url,
       quantity:     current_quantity,
-      product_code: current_code
+      product_code: current_code,
+      left_count:   current_left_count
     )
   end
 
-  def load_content
+  def load_page
     Mechanize.new.get(ENV['BASE_PARSING_URL'])
   end
 
