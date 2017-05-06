@@ -6,7 +6,6 @@ gem 'hanami-model', '~> 1.0'
 
 gem 'pg'
 
-gem 'interactor', '~> 3.0' # Service objects
 gem 'mechanize', '~> 2.0' # Websites interaction
 
 group :development do
@@ -21,6 +20,10 @@ end
 group :test do
   gem 'rspec'
   gem 'capybara'
+  gem 'webmock', '~> 3.0' # Mocking HTTP requests
+  gem 'database_cleaner' # Data maintenance within test specs
+  gem 'factory_girl' # Test data generating
+  gem 'faker', '~> 1.7'
 end
 
 group :production do

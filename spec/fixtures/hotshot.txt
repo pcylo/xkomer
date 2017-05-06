@@ -1,0 +1,39 @@
+HTTP/1.1 200 OK
+Date: Fri, 05 May 2017 17:46:54 GMT
+Content-Type: text/html;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=dbe85ec55e749097572545fdea0756e191494006414; expires=Sat, 05-May-18 17:46:54 GMT; path=/; domain=.x-kom.pl; HttpOnly
+Set-Cookie: PHPSESSID=lfuv3nje3ucjndba3cssvkulo4; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Set-Cookie: basket_string=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/
+Vary: Accept-Encoding
+X-LbNode: 07
+X-Content-Type-Options: nosniff
+X-Frame-Options: sameorigin
+Server: cloudflare-nginx
+CF-RAY: 35a58599ebad46c2-WAW
+
+<!doctype html>
+<div id="hotShot" class="hot-shot" data-products-list-name="Hot Shot">
+  <div class="row">
+    <div class="col-md-12 col-sm-6 product-impression" data-product-id="123" data-product-name="ProductName" data-product-price="219">
+      <img class="img-responsive center-block" src="https://cdn.x-kom.pl/i/img/promotions/hot-shot-small,,xxx.png" alt="ProductName">
+      <p class="product-name">ProductName</p>
+    </div>
+    <div class="col-md-12 col-sm-6">
+      <div class="clearfix price">
+        <div class="old-price">299,00 zł</div>
+        <div class="new-price">219,00 zł</div>
+      </div>
+      <div class="clearfix discount hidden-md hidden-lg">
+        Oszczędź <span class="discount-value">80 zł</span>
+      </div>
+      <div class="clearfix progress">
+        <div class="progress-bar progress-color-third" role="progressbar" aria-valuenow="192" aria-valuemin="0" aria-valuemax="199"></div>
+      </div>
+    </div>
+  </div>
+</div>
