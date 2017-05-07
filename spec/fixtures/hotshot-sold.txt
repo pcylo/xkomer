@@ -1,0 +1,57 @@
+HTTP/1.1 200 OK
+Date: Fri, 05 May 2017 17:46:54 GMT
+Content-Type: text/html;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=dbe85ec55e749097572545fdea0756e191494006414; expires=Sat, 05-May-18 17:46:54 GMT; path=/; domain=.x-kom.pl; HttpOnly
+Set-Cookie: PHPSESSID=lfuv3nje3ucjndba3cssvkulo4; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Set-Cookie: basket_string=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/
+Vary: Accept-Encoding
+X-LbNode: 07
+X-Content-Type-Options: nosniff
+X-Frame-Options: sameorigin
+Server: cloudflare-nginx
+CF-RAY: 35a58599ebad46c2-WAW
+
+<!doctype html>
+<div id="hotShot" class="hot-shot sold" data-products-list-name="Hot Shot">
+    <div class="row">
+        <header class="text-left col-xs-12 col-md-12 col-lg-7">
+            <h2>Gorący strzał</h2>
+        </header>
+        <div class="text-right hidden-xs hidden-sm col-md-12 col-lg-5">
+            <div class="discount-tip text-center">
+                <span class="discount-tip-label center-block">Oszczędź</span>
+                <span class="discount-tip-value center-block">50&nbsp;zł</span>
+                <div class="discount-tip-line text-right">
+                    <img src="/assets/img/common/curved-line-bnw.svg" alt="Linia">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-6 product-impression" data-product-id="56573" data-product-name="Głośniki Logitech 2.1 Z313" data-product-price="109">
+                            <img class="img-responsive center-block" src="https://cdn.x-kom.pl/i/img/promotions/hot-shot-small,,hs_2017_5_5_10_2_39.PNG?filters=grayscale" alt="Głośniki Logitech 2.1 Z313">
+                        <p class="product-name">Głośniki Logitech 2.1 Z313</p>
+        </div>
+        <div class="col-md-12 col-sm-6">
+            <div class="clearfix price">
+                <div class="old-price">159,00 zł</div>
+                <div class="new-price">109,00 zł</div>
+            </div>
+                            <div class="clearfix discount hidden-md hidden-lg">
+                    <span class="discount-value">Oszczędź 50&nbsp;zł</span>
+                </div>
+
+                            <div class="sold-info">Wyprzedano</div>
+                <p class="hurry-info">Do kolejnej promocji pozostało:</p>
+
+            <div class="hot-shot-timer">
+                <div><span class="h">0</span><span class="h">0</span><span class="descr">GODZ</span></div><div>:</div><div><span class="m">0</span><span class="m">3</span><span class="descr">MIN</span></div><div>:</div><div><span class="s">1</span><span class="s">5</span><span class="descr">SEK</span></div>
+            </div>
+        </div>
+    </div>
+</div>

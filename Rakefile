@@ -7,7 +7,7 @@ begin
   task default: :spec
 
   task fetch_offer: :environment do
-    # UserRepository.new.clear TODO
+    FetchCurrentOffer.new.call
   end
 rescue LoadError
 end

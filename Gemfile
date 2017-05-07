@@ -7,6 +7,8 @@ gem 'hanami-model', '~> 1.0'
 gem 'pg'
 
 gem 'mechanize', '~> 2.0' # Websites interaction
+gem 'sass', '~> 3.4' # SASS complitation support
+gem 'bootstrap', '~> 4.0.0.alpha6'
 
 group :development do
   gem 'shotgun' # Code reloading

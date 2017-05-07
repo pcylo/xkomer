@@ -7,10 +7,14 @@ class FetchCurrentOffer
     @current_old_price  = get_by_selector(ENV['OLD_PRICE_SELECTOR'])
     @current_new_price  = get_by_selector(ENV['NEW_PRICE_SELECTOR'])
     @current_discount   = get_by_selector(ENV['DISCOUNT_SELECTOR'])
-    @current_image_url  = get_attr_by_selector(ENV['IMAGE_URL_SELECTOR'], 'src').to_s.gsub('-small', '')
-    @current_quantity   = get_attr_by_selector(ENV['QUANTITY_SELECTOR'], 'aria-valuemax').to_s.to_i
-    @current_code       = get_attr_by_selector(ENV['CODE_SELECTOR'], 'data-product-id').to_s.to_i
-    @current_left_count = get_attr_by_selector(ENV['SOLD_COUNT_SELECTOR'], 'aria-valuenow').to_s.to_i
+    @current_image_url  = get_attr_by_selector(ENV['IMAGE_URL_SELECTOR'], 'src').to_s.
+                            gsub('-small', '')
+    @current_quantity   = get_int_attr_by_selector(ENV['QUANTITY_SELECTOR'], 'aria-valuemax', 0).
+                            to_s.to_i
+    @current_code       = get_attr_by_selector(ENV['CODE_SELECTOR'], 'data-product-id').
+                            to_s.to_i
+    @current_left_count = get_int_attr_by_selector(ENV['SOLD_COUNT_SELECTOR'], 'aria-valuenow', 0).
+                            to_s.to_i
   end
 
   def call
@@ -55,5 +59,9 @@ class FetchCurrentOffer
 
   def get_attr_by_selector(selector, attribute)
     page.at(selector)&.attributes[attribute]
+  end
+
+  def get_int_attr_by_selector(selector, attribute, default)
+    page.at(selector) ? page.at(selector).attributes[attribute] : default
   end
 end
