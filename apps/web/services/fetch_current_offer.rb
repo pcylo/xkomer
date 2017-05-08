@@ -8,7 +8,7 @@ class FetchCurrentOffer
     @current_new_price  = get_by_selector(ENV['NEW_PRICE_SELECTOR'])
     @current_discount   = get_by_selector(ENV['DISCOUNT_SELECTOR'])
     @current_image_url  = get_attr_by_selector(ENV['IMAGE_URL_SELECTOR'], 'src').to_s.
-                            gsub('-small', '')
+                            gsub('-small', '').gsub('?filters=grayscale', '')
     @current_quantity   = get_int_attr_by_selector(ENV['QUANTITY_SELECTOR'], 'aria-valuemax', 0).
                             to_s.to_i
     @current_code       = get_attr_by_selector(ENV['CODE_SELECTOR'], 'data-product-id').

@@ -20,7 +20,7 @@ CF-RAY: 35a58599ebad46c2-WAW
 <div id="hotShot" class="hot-shot" data-products-list-name="Hot Shot">
   <div class="row">
     <div class="col-md-12 col-sm-6 product-impression" data-product-id="123" data-product-name="ProductName" data-product-price="219">
-      <img class="img-responsive center-block" src="https://cdn.x-kom.pl/i/img/promotions/hot-shot-small,,xxx.png" alt="ProductName">
+      <img class="img-responsive center-block" src="https://cdn.x-kom.pl/i/img/promotions/hot-shot-small,,xxx.png?filters=grayscale" alt="ProductName">
       <p class="product-name">ProductName</p>
     </div>
     <div class="col-md-12 col-sm-6">
