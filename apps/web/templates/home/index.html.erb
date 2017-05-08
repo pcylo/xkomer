@@ -1,34 +1,41 @@
 <section class="main-offer row">
   <div class="col col-md-3 offer-img d-flex align-items-center justify-content-center">
-    <img src="https://cdn.x-kom.pl/i/img/promotions/hot-shot,,hs_2017_5_5_10_23_11.PNG" alt="xxx">
+    <img src="<%= current_offer.image_url %>" alt="<%= current_offer.name %>">
   </div>
   <div class="col col-md-9 offer-details">
-    <h2>Kamera IP Xiaomi Yi Dome HD LED IR</h2>
+    <h2><%= current_offer.name %></h2>
     <div>
-      <p class="offer-price"><span class="offer-old-price">219.00 zł </span>&nbsp;299.00 zł&nbsp;</p>
-      <p class="offer-discount"><i>Oszczędzasz 80 zł!</i></p><!-- TODO: Move to gfx label -->
+      <p class="offer-price"><span class="offer-old-price"><%= current_offer.new_price %> </span>&nbsp;<%= current_offer.old_price %>&nbsp;</p>
+      <p class="offer-discount"><i>Oszczędzasz <%= current_offer.discount %>!</i></p><!-- TODO: Move to gfx label -->
     </div>
     <div>
-        <p>Pozostało 13 z 150 sztuk</p>
+        <p>Pozostało <%= current_offer.left_count %> z <%= current_offer.quantity %> sztuk</p>
       <div class="progress">
-        <div class="progress-bar bg-success" role="progressbar"  style="width: 13%" aria-valuenow="13" aria-valuemin="0" aria-valuemax="100">
+        <!-- TODO: MOVE CALCULATION -->
+        <div class="progress-bar bg-success" role="progressbar"  style="width: <%= current_offer.left_count*100/current_offer.quantity %>%" aria-valuenow="<%= current_offer.left_count %>" aria-valuemin="0" aria-valuemax="<%= current_offer.quantity %>">
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<p class="text-center">Archiwalne oferty:</p>
+<p class="separator-header">Archiwalne oferty:</p>
+
+<% offers.each do |offer| %>
 
 <section class="archived-offer row">
   <div class="col col-md-3 offer-img d-flex align-items-center justify-content-center">
-    <img src="https://cdn.x-kom.pl/i/img/promotions/hot-shot,,hs_2017_5_5_10_48_15.PNG?filters=grayscale" alt="xxx">
+    <img src="<%= offer.image_url %>?filters=grayscale" alt="<%= offer.name %>">
   </div>
   <div class="col col-md-9 offer-details">
-    <h4>SanDisk 32GB microSDHC Ultra Class 10 UHS-I 48MB/s</h2>
+    <h4><%= offer.name %></h2>
     <div>
-      <p class="offer-price"><span class="offer-old-price">39.00 zł </span>&nbsp;55.00 zł&nbsp;</p>
-      <p class="offer-discount"><i>Oferta z dnia 07.05.2017</i></p>
+      <p class="offer-price"><span class="offer-old-price"><%= offer.new_price %> </span>&nbsp;<%= offer.old_price %>&nbsp;</p>
+      <p class="offer-discount"><i>Oferta z dnia <%= offer.created_at.strftime("%d-%m-%Y") %></i></p>
     </div>
   </div>
 </section>
+
+<% end %>
+
+

@@ -6678,12 +6678,11 @@ input[type="text"] {
   background: transparent;
   border-color: #272727;
   margin-right: 1rem !important;
-  transition-duration: 1s; }
+  transition: all 0.3s ease-in-out;
+  width: 100px; }
 
-.sign-up-input:active {
-  background: pink;
-  border-color: #272727;
-  transition-duration: 1s; }
+.sign-up-input:focus {
+  width: 250px; }
 
 .footer {
   position: absolute;
@@ -6694,7 +6693,7 @@ input[type="text"] {
   background-color: #232323; }
 
 body > .container {
-  padding: 0 15px 0; }
+  padding: 0 0 20px 0; }
 
 .footer > .container {
   padding-right: 15px;
@@ -6719,7 +6718,10 @@ body > .container {
   box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2); }
 
 .archived-offer {
-  color: #6b6379; }
+  color: #6b6379;
+  -webkit-box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.2); }
 
 .main-offer .offer-details {
   padding: 20px 10px; }
@@ -6749,7 +6751,7 @@ body > .container {
 .offer-price span {
   text-decoration: none;
   font-size: 1.3em;
-  background: linear-gradient(45deg, #b30092, #33e3ff);
+  background: linear-gradient(45deg, #182083, #4cb8ff);
   color: #fff;
   font-weight: 400;
   display: inline-block;
@@ -6768,3 +6770,15 @@ body > .container {
 .archived-offer .offer-img img {
   max-width: 100%;
   max-height: 80px; }
+
+.separator-header {
+  text-align: center;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.65);
+  padding: 5px; }

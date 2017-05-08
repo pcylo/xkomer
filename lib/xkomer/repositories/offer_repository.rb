@@ -8,4 +8,8 @@ class OfferRepository < Hanami::Repository
     raise OfferRepository::DuplicatedOffersError if matching.count > 1
     matching.last && matching.last[:id]
   end
+
+  def recent_ordered(limit: 11)
+    offers.reverse(:updated_at).limit(limit).to_a
+  end
 end
