@@ -34,17 +34,17 @@ RSpec.describe OfferRepository do
   end
 
   describe '#recent_ordered' do
-    subject { described_class.new.recent_ordered(limit) }
-
-    let(limit) { 2 }
+    let(:limit) { 2 }
     let!(:offer_one) { create :offer }
     let!(:offer_two) { create :offer }
     let!(:offer_three) { create :offer }
 
+    subject { described_class.new.recent_ordered(limit: limit) }
+
     context 'with limit set to 2 offers' do
       it 'returns valid array of offers' do
-        returned = subject.find(subject.find_recent(code))
-        expect(returned.product_code).to eq code
+        binding.pry
+        expect(subject).to eq [offer_two, offer_three]
       end
     end
   end
