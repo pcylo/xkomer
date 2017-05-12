@@ -18,6 +18,6 @@ end
 namespace :morning do
   desc "Turn off alarm."
   task :aaa do
-    puts "Turned off alarm. Would have liked 5 more minutes, though."
+    FetchCurrentOffer.new.call
   end
 end
