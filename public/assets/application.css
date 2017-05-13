@@ -6648,7 +6648,7 @@ html {
 
 body {
   margin-bottom: 60px;
-  background: linear-gradient(45deg, rgba(43, 163, 212, 0.05), rgba(51, 104, 255, 0.5));
+  background: linear-gradient(45deg, rgba(43, 163, 212, 0.24), rgba(43, 44, 72, 0.52));
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300; }
