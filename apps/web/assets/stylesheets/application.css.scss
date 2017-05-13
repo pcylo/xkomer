@@ -167,3 +167,21 @@ body > .container {
   color: #464a4c;
   padding: 5px;
 }
+
+@include media-breakpoint-down(md) {
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  .offer-details {
+    text-align: center;
+  }
+
+  .offer-price {
+    font-size: 12pt;
+  }
+}

@@ -1,8 +1,8 @@
 <section class="main-offer row">
-  <div class="col col-md-3 offer-img d-flex align-items-center justify-content-center">
+  <div class="col-md-3 offer-img d-flex align-items-center justify-content-center">
     <img src="<%= current_offer.image_url %>" alt="<%= current_offer.name %>">
   </div>
-  <div class="col col-md-9 offer-details">
+  <div class="col-md-9 offer-details">
     <h2><%= current_offer.name %></h2>
     <div>
       <p class="offer-price"><span class="offer-old-price"><%= current_offer.new_price %> </span>&nbsp;<%= current_offer.old_price %>&nbsp;</p>
@@ -24,10 +24,10 @@
 <% offers.each do |offer| %>
 
 <section class="archived-offer row">
-  <div class="col col-md-3 offer-img d-flex align-items-center justify-content-center">
+  <div class="col-md-3 offer-img d-flex align-items-center justify-content-center">
     <img src="<%= offer.image_url %>?filters=grayscale" alt="<%= offer.name %>">
   </div>
-  <div class="col col-md-9 offer-details">
+  <div class="col-md-9 offer-details">
     <h4><%= offer.name %></h2>
     <div>
       <p class="offer-price"><span class="offer-old-price"><%= offer.new_price %> </span>&nbsp;<%= offer.old_price %>&nbsp;</p>
