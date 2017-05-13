@@ -1,6 +1,12 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin-ext');
 
+@mixin rounded($fi: 40px) {
+  -webkit-border-radius: $fi;
+  -moz-border-radius: $fi;
+  border-radius: $fi;
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -8,7 +14,7 @@ html {
 
 body {
   margin-bottom: 60px;
-  background: linear-gradient(45deg, rgba(43, 163, 212, 0.24), rgba(43, 44, 72, 0.52));
+  background: linear-gradient(45deg, rgba(43, 44, 72, 0.52), rgba(43, 163, 212, 0.24));
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -20,19 +26,24 @@ h2, h4 {
 
 nav {
   margin: 15px 0;
+  @include rounded(3px);
+}
+
+a {
+  color: #5bc0de;
 }
 
 .btn {
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+  @include rounded(20px);
   cursor: pointer;
 }
 
 input[type="text"] {
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+  @include rounded(20px);
+}
+
+.email-submit-btn {
+  content: 'sdf';
 }
 
 .sign-up-input {
@@ -81,6 +92,7 @@ body > .container {
   -webkit-box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.2);
   -moz-box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.2);
   box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.2);
+  @include rounded(3px);
 }
 
 .archived-offer {
@@ -129,9 +141,7 @@ body > .container {
   color: #fff;
   font-weight: 400;
   display: inline-block;
-  -webkit-border-radius: 45px;
-  -moz-border-radius: 45px;
-  border-radius: 45px;
+  @include rounded(40px);
   padding: 0 12px;
   margin: 0 10px 0 0;
 }
@@ -142,6 +152,10 @@ body > .container {
 
 .progress .bg-success {
   background: linear-gradient(45deg, #2ba3d4, #33ff43);
+}
+
+.progress, .progress-bar {
+  @include rounded(40px);
 }
 
 .archived-offer .offer-img img {
@@ -157,6 +171,7 @@ body > .container {
   background: rgba(0, 0, 0, 0.15);
   color: #464a4c;
   padding: 5px;
+  @include rounded(3px);
 }
 
 @include media-breakpoint-down(md) {
@@ -166,6 +181,27 @@ body > .container {
 
   h4 {
     font-size: 1.1rem;
+  }
+
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  .email-form-wrapper {
+    margin: 0 auto;
+    width: 270px;
+  }
+
+  .email-submit-btn span {
+    display: none;
+  }
+
+  .email-submit-btn:after {
+    content: '+';
+  }
+
+  .sign-up-input, .sign-up-input:focus {
+      width: 190px;
   }
 
   .offer-details {
