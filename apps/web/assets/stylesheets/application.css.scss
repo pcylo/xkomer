@@ -20,9 +20,6 @@ h2, h4 {
 
 nav {
   margin: 15px 0;
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
-  border-radius: 60px;
 }
 
 .btn {
@@ -79,9 +76,6 @@ body > .container {
 .main-offer, .archived-offer {
   background: #fff;
   color: #232323;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
   padding: 20px;
   margin: 20px 0;
   -webkit-box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.2);
@@ -135,9 +129,9 @@ body > .container {
   color: #fff;
   font-weight: 400;
   display: inline-block;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  border-radius: 45px;
   padding: 0 12px;
   margin: 0 10px 0 0;
 }
@@ -157,9 +151,6 @@ body > .container {
 
 .separator-header {
   text-align: center;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
   -webkit-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.2);
   -moz-box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.2);
   box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.2);
