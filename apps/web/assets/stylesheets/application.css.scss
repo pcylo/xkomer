@@ -33,6 +33,11 @@ a {
   color: #5bc0de;
 }
 
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
 .btn {
   @include rounded(20px);
   cursor: pointer;
