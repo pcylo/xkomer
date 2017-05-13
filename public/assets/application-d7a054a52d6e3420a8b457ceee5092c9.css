@@ -1884,7 +1884,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {color: #101112 !important}
 html {position: relative; min-height: 100%}
 body {margin-bottom: 60px; background: linear-gradient(45deg, rgba(43, 163, 212, 0.24), rgba(43, 44, 72, 0.52)); color: #fff; font-family: 'Open Sans', sans-serif; font-weight: 300}
 h2, h4 {font-weight: 300}
-nav {margin: 15px 0; -webkit-border-radius: 60px; -moz-border-radius: 60px; border-radius: 60px}
+nav {margin: 15px 0}
 .btn {-webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; cursor: pointer}
 input[type="text"] {-webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px}
 .sign-up-input {background: transparent; border-color: #272727; margin-right: 1rem !important; transition: all 0.3s ease-in-out; width: 100px}
@@ -1894,7 +1894,7 @@ body > .container {padding: 0 0 20px 0}
 .footer > .container {padding-right: 15px; padding-left: 15px}
 .navbar {background: #000 !important}
 .navbar-text {font-weight: 300}
-.main-offer, .archived-offer {background: #fff; color: #232323; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; padding: 20px; margin: 20px 0; -webkit-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2)}
+.main-offer, .archived-offer {background: #fff; color: #232323; padding: 20px; margin: 20px 0; -webkit-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2)}
 .archived-offer {color: #6b6379; -webkit-box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.2)}
 .main-offer .offer-details {padding: 20px 10px}
 .archived-offer .offer-details {padding: 10px}
@@ -1903,11 +1903,11 @@ body > .container {padding: 0 0 20px 0}
 .main-offer .offer-img img {max-width: 100%; max-height: 200px}
 .offer-price {text-decoration: line-through; font-size: 15pt; color: #949494}
 .archived-offer .offer-price {font-size: 12pt}
-.offer-price span {text-decoration: none; font-size: 1.3em; background: linear-gradient(45deg, #182083, #4cb8ff); color: #fff; font-weight: 400; display: inline-block; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; padding: 0 12px; margin: 0 10px 0 0}
+.offer-price span {text-decoration: none; font-size: 1.3em; background: linear-gradient(45deg, #182083, #4cb8ff); color: #fff; font-weight: 400; display: inline-block; -webkit-border-radius: 45px; -moz-border-radius: 45px; border-radius: 45px; padding: 0 12px; margin: 0 10px 0 0}
 .offer-discount {margin: 0 10px}
 .progress .bg-success {background: linear-gradient(45deg, #2ba3d4, #33ff43)}
 .archived-offer .offer-img img {max-width: 100%; max-height: 80px}
-.separator-header {text-align: center; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; -webkit-box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2); background: rgba(0, 0, 0, 0.15); color: #464a4c; padding: 5px}
+.separator-header {text-align: center; -webkit-box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2); background: rgba(0, 0, 0, 0.15); color: #464a4c; padding: 5px}
 @media (max-width: 991px) {h2 {font-size: 1.2rem}
 h4 {font-size: 1.1rem}
 .offer-details {text-align: center}
