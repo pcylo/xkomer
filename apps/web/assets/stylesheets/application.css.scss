@@ -89,6 +89,10 @@ body > .container {
   font-weight: 300;
 }
 
+.navbar-brand img {
+  width: 120px;
+}
+
 .main-offer, .archived-offer {
   background: #fff;
   color: #232323;
@@ -190,6 +194,10 @@ body > .container {
 
   .navbar-collapse {
     text-align: center;
+  }
+
+  .navbar-brand img {
+    width: 100px;
   }
 
   .email-form-wrapper {

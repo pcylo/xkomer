@@ -1886,6 +1886,7 @@ body {margin-bottom: 60px; background: linear-gradient(45deg, rgba(43, 44, 72, 0
 h2, h4 {font-weight: 300}
 nav {margin: 15px 0; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px}
 a {color: #5bc0de}
+footer {text-align: center; font-size: 0.8rem}
 .btn {-webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; cursor: pointer}
 input[type="text"] {-webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px}
 .email-submit-btn {content: 'sdf'}
@@ -1896,6 +1897,7 @@ body > .container {padding: 0 0 20px 0}
 .footer > .container {padding-right: 15px; padding-left: 15px}
 .navbar {background: #000 !important}
 .navbar-text {font-weight: 300}
+.navbar-brand img {width: 120px}
 .main-offer, .archived-offer {background: #fff; color: #232323; padding: 20px; margin: 20px 0; -webkit-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2); -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px}
 .archived-offer {color: #6b6379; -webkit-box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.2)}
 .main-offer .offer-details {padding: 20px 10px}
@@ -1914,10 +1916,12 @@ body > .container {padding: 0 0 20px 0}
 @media (max-width: 991px) {h2 {font-size: 1.2rem}
 h4 {font-size: 1.1rem}
 .navbar-collapse {text-align: center}
+.navbar-brand img {width: 100px}
 .email-form-wrapper {margin: 0 auto; width: 270px}
 .email-submit-btn span {display: none}
 .email-submit-btn:after {content: '+'}
 .sign-up-input, .sign-up-input:focus {width: 190px}
+.offer-img img {margin-left: 25px}
 .offer-details {text-align: center}
 .offer-price {font-size: 12pt}
 }
