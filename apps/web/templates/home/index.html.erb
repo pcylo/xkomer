@@ -3,20 +3,19 @@
     <img src="<%= current_offer.image_url %>" alt="<%= current_offer.name %>">
   </div>
   <div class="col-md-9 offer-details">
-    <h2><%= current_offer.name %></h2>
+    <h2><a href="http://x-kom.pl/"><%= current_offer.name %></a></h2>
     <div>
       <p class="offer-price"><span class="offer-old-price"><%= current_offer.new_price %> </span>&nbsp;<%= current_offer.old_price %>&nbsp;</p>
-      <p class="offer-discount"><i>Oszczędzasz <%= current_offer.discount %>!</i></p><!-- TODO: Move to gfx label -->
     </div>
     <div>
         <p>Pozostało <%= current_offer.left_count %> z <%= current_offer.quantity %> sztuk</p>
       <div class="progress">
-        <!-- TODO: MOVE CALCULATION -->
-        <div class="progress-bar bg-success" role="progressbar"  style="width: <%= current_offer.left_count*100/current_offer.quantity %>%" aria-valuenow="<%= current_offer.left_count %>" aria-valuemin="0" aria-valuemax="<%= current_offer.quantity %>">
+        <div class="progress-bar bg-success" role="progressbar"  style="width: <%= current_offer.items_left_percentage %>%" aria-valuenow="<%= current_offer.left_count %>" aria-valuemin="0" aria-valuemax="<%= current_offer.quantity %>">
         </div>
       </div>
     </div>
   </div>
+  <div class="offer-discount">- <%= current_offer.discount %></div>
 </section>
 
 <p class="separator-header">Archiwalne oferty:</p>
@@ -31,7 +30,7 @@
     <h4><%= offer.name %></h2>
     <div>
       <p class="offer-price"><span class="offer-old-price"><%= offer.new_price %> </span>&nbsp;<%= offer.old_price %>&nbsp;</p>
-      <p class="offer-discount"><i>Oferta z dnia <%= offer.created_at.strftime("%d-%m-%Y") %></i></p>
+      <p class="offer-date"><i>Oferta z dnia <%= offer.created_at.strftime("%d-%m-%Y") %></i></p>
     </div>
   </div>
 </section>

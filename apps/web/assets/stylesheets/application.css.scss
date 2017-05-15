@@ -7,6 +7,12 @@
   border-radius: $fi;
 }
 
+@mixin rotated($radius: 20deg) {
+  -ms-transform: rotate($radius);
+  -webkit-transform: rotate($radius);
+  transform: rotate($radius);
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -156,6 +162,21 @@ body > .container {
 }
 
 .offer-discount {
+  margin: 0 10px;
+  display: inline-block;
+  background: #48c73c;
+  color: #fff;
+  padding: 4px 10px;
+  float: right;
+  @include rounded(40px);
+  font-weight: 600;
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  @include rotated(-25deg);
+}
+
+.offer-date {
   margin: 0 10px;
 }
 
