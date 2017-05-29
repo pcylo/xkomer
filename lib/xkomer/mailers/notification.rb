@@ -1,7 +1,8 @@
 class Mailers::Notification
   include Hanami::Mailer
 
-  to      'pawel@firma.xin.pl'
+  to      'pawelcylo@gmail.com'
+  from    ENV['SMTP_DEFAULT_SENDER']
   subject :mail_subject
 
   private
