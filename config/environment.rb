@@ -43,7 +43,14 @@ Hanami.configure do
     logger level: :info, formatter: :json
 
     mailer do
-      delivery :smtp, address: ENV['SMTP_HOST'], port: ENV['SMTP_PORT']
+      delivery :smtp,
+        user_name: ENV['SENDGRID_USERNAME'],
+        password: ENV['SENDGRID_PASSWORD'],
+        domain: 'x-komer.herokuapp.com',
+        address: 'smtp.sendgrid.net',
+        port: 587,
+        authentication: :plain,
+        enable_starttls_auto: true
     end
   end
 end
