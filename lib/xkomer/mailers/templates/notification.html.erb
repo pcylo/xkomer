@@ -1,1 +1,11 @@
-<h1>Test</h1>
+<h4>Nowa promocja Gorący Strzał:<h4>
+<h1><%= offer.name %></h1>
+
+<p>
+  <img src='<%= offer.image_url %>' alt='<%= offer.name %>'>
+</p>
+
+<p>Cena: <b><%= offer.new_price %></b> (było: <%= offer.old_price %>)</p>
+<p>Dostępnych sztuk: <b><%= offer.quantity %></b></p>
+
+<p><a href="http://x-kom.pl">Zobacz na x-kom.pl</a></p>

@@ -8,7 +8,7 @@ class Mailers::Notification
   private
 
   def mail_subject
-    # offer = Offer.new
-    "GS: #{ 'Lorem ipsum' }"
+    offer = OfferRepository.new.last
+    "GS: #{ offer.name }"
   end
 end

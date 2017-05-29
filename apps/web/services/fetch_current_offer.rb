@@ -47,6 +47,7 @@ class FetchCurrentOffer
       product_code: current_code,
       left_count:   current_left_count
     )
+    Mailers::Notification.deliver
   end
 
   def load_page
