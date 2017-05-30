@@ -28,8 +28,7 @@ class FetchCurrentOffer
               :current_left_count
 
   def offer_exists?
-    @existing_id = OfferRepository.new.find_recent(current_code)
-    !!existing_id
+    !!(@existing_id = OfferRepository.new.find_recent(current_code))
   end
 
   def update_existing_offer
@@ -37,7 +36,7 @@ class FetchCurrentOffer
   end
 
   def create_new_offer
-    repository.create(
+    new_offer = repository.create(
       name:         current_name,
       old_price:    current_old_price,
       new_price:    current_new_price,
@@ -47,7 +46,7 @@ class FetchCurrentOffer
       product_code: current_code,
       left_count:   current_left_count
     )
-    Mailers::Notification.deliver
+    Mailers::Notification.deliver(offer: new_offer) # TODO move to service
   end
 
   def load_page
